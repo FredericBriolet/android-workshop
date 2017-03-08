@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FAFAFA"
+    tools:context="com.example.fred.testapp.MainActivity">
+
+    <TextView
+        android:id="@+id/numberTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="How many questions, buddy?"
+        android:textColor="#000"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:textSize="10sp"
+        android:layout_marginTop="26dp"
+        />
+
+    <TextView
+        android:id="@+id/numberView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textColor="#000099"
+        android:textSize="80sp"
+        android:layout_below="@+id/numberTitle"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/numberDifficulty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Which difficulty, mate?"
+        android:textColor="#000"
+        android:textSize="10sp"
+        android:layout_alignTop="@+id/numberAction"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="14dp" />
+
+    <SeekBar
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/numberAction"
+        android:layout_marginTop="62dp"
+        android:layout_below="@+id/numberView"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:text="Send"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/buttonAction"
+        android:layout_marginBottom="83dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:onClick="sendMessage"
+        />
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignTop="@+id/numberAction"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp">
+
+        <RadioButton android:id="@+id/easy_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Easy"
+            android:paddingRight="40dp"
+            android:onClick="onRadioButtonClicked"/>
+
+        <RadioButton android:id="@+id/medium_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Medium"
+            android:paddingRight="40dp"
+            android:onClick="onRadioButtonClicked"/>
+        <RadioButton android:id="@+id/hard_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hard"
+            android:onClick="onRadioButtonClicked"/>
+    </RadioGroup>
+
+</RelativeLayout>
